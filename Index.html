@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Expresion 19</title>
+    <script>
+        function validarContra(){
+            let contra = document.getElementById("contra").value;
+            let confirmarContra = document.getElementById("confirmarContra").value;    
+            if(contra == confirmarContra){
+                const condicion = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?([^\w\s]|[_])).{12,}$/;
+                if(condicion.test(contra)){
+                    localStorage.setItem('contra',contra);
+                    window.location="resultado.html";
+                }else{
+                    alert("La Contraseña no cumple con los parámetros establecidos");
+                }            
+            }else{
+                alert("Las Contraseñas no coinciden");
+            }
+        }                
+    </script>
+</head>
+<body>
+    <form action="javascript:validarContra()">
+        <h2>La Contraseña requiere al menos una mayúscula, minúsculas, números y al menos un carácter especial, con una longitud mínima de 12 caracteres. </h2>
+        <h3>Ingrese la contraseña</h3>
+        <input type="password" id="contra">
+        <h3>Confirme la contraseña</h3>
+        <input type="password" id="confirmarContra">
+        <br><br>
+        <button type="submit">Validar</button>
+    </form>
+    <h3>Elaborado por: Alejandro Cruz Alvarez Carranza</h3>
+    <h4>Ejercicio 19 - Validar Contraseña</h4>
+</body>
+</html>

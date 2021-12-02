@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado - Ejercicio19</title>
+</head>
+<body>
+
+    <h1>Uso de Expresiones Regulares para Validación de Cadenas</h1>
+    <h1>Ejercicio 19.Contraseña que requiera al menos una mayúscula, minúsculas, números y al menos un carácter especial, con una longitud mínima de 12 caracteres</h1>
+    <h2>Alumno: Alejandro Cruz Álvarez Carranza</h2>
+    <h2>Grupo: I7U</h2>
+    <h2>No. Control: 18390043</h2>
+    <h2>Carrera: Ing. Sistemas Computacionales</h2>
+    <h2>Materia: Desarrollo Web</h2>
+    
+    <script>
+        let contraTexto = document.createElement("h2");
+        contraTexto.innerHTML="La Contraseña Ingresada es: "+localStorage.getItem("contra");
+        let masTexto = document.createElement("h3");
+        masTexto.innerHTML="La Contraseña Cumple Correctamente con los Parámetros Establecidos";
+        let body = document.getElementsByTagName("body")[0];
+        body.appendChild(contraTexto);
+        body.appendChild(masTexto);
+    </script>
+
+    <a href="Index.html"><button>Regresar al Formulario</button></a>
+</body>
+</html>
